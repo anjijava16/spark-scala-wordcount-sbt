@@ -18,5 +18,7 @@ object Main {
     val counts = ones.reduceByKey(_ + _)
 
     counts.saveAsTextFile(output)
+
+    spark.stop()
   }
 }
